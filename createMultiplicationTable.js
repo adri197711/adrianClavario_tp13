@@ -1,6 +1,3 @@
-
-
-
 function createMultiplicationTable() {
   for (let i = 1; i <= 10; i++) {
      console.log(`
@@ -17,3 +14,5 @@ Tabla de multiplicar x${i}
 }
 
 createMultiplicationTable();
+
+module.exports = createMultiplicationTable;
