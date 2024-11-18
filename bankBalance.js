@@ -5,7 +5,7 @@ function calculateBalances(operaciones) {
   let retiros = 0;
 
   operaciones.forEach(operacion => {
-    (operacion > 0) ? depositos += operacion : retiros -= operacion;
+    (operacion > 0) ? depositos += operacion : retiros += operacion;
   });
 
   let saldoActual = depositos - retiros;
