@@ -8,8 +8,8 @@ function calculateBalances(operaciones) {
     (operacion > 0) ? depositos += operacion : retiros += operacion;
   });
 
-  let saldoActual = depositos - retiros;
-  
+  // let saldoActual = depositos - retiros;
+  let saldoActual = depositos - Math.abs(retiros);
   return { depositos, retiros, saldoActual }
 }
 
@@ -32,4 +32,4 @@ function bankBalance(nombre, apellido,operaciones) {
   // console.log(bankBalance("Ana", "Veliz", bancarias));
   
 
-  module.exports = bankBalance;
+  module.exports = {calculateBalances};
